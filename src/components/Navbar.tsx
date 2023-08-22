@@ -1,4 +1,5 @@
 import Svg from '../assets/Diabase.svg'
+import { motion } from "framer-motion";
 import { useState, useRef, RefObject, useEffect } from 'react';
 
 
@@ -26,6 +27,13 @@ export const Navbar = () => {
 
   return (
       <>
+      <motion.header
+     
+      initial={{ y: -250 }}
+      animate={{ y: -10 }}
+      transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
+    >
+
     <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
  
     
@@ -56,10 +64,11 @@ export const Navbar = () => {
   </div>
   <div id="navbar-collapse-with-animation" className={`hs-collapse ${isMenuOpen ? '' : 'hidden'} overflow-hidden transition-all duration-300 basis-full grow custom:block`}>
   <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Wallet</a>
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Technologies</a>
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Roadmap</a>
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Trade</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-105" href="#">Wallet</a>
+<a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-105" href="#">Technologies</a>
+<a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-105" href="#">Roadmap</a>
+<a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-105" href="#">Trade</a>
+
 
 
 
@@ -107,6 +116,7 @@ export const Navbar = () => {
   </div>
 </nav>
 </header>
+    </motion.header>
       </>
   )
 }
