@@ -21,12 +21,13 @@ export const Header = () => {
 
     return (
         <motion.header 
-            className="flex flex-col md:flex-row items-center bg-white shadow-lg p-4 md:p-10 mx-2 md:mx-8"
+        className="mt-20 flex flex-col md:flex-row items-center bg-opacity-50 bg-white backdrop-blur-md shadow-lg p-4 md:p-10 mx-2 md:mx-8 border-2 border-gray-300 rounded-lg"
+
             variants={fadeInUp}
             initial="initial"
             animate="animate"
         >
-            <video className="w-full md:w-auto mb-4 md:mb-0 md:mr-10" autoPlay muted>
+            <video className="w-full md:w-auto mb-4 md:mb-0 md:mr-110" autoPlay muted>
                 <source src={videoSource} type="video/mp4" />
             </video>
             <div className="flex-grow">
