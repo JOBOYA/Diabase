@@ -40,7 +40,8 @@ export const Navbar = () => {
 
 
  
-    <nav className="mt-6 relative max-w-7xl w-full bg-white border border-gray-300 rounded-lg shadow-xl mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto">
+    <nav className="mt-6 relative max-w-7xl w-full bg-white border border-gray-300 rounded-lg shadow-xl mx-2 py-3 px-4 md:flex md:items-center md:justify-center md:py-0 md:px-6 lg:px-8 xl:mx-auto">
+
     <img className="hidden md:block" src={Svg} alt="logo" />
   <div className="flex items-center justify-between">
      {/* Logo visible pour les écrans inférieurs à md */}
@@ -64,10 +65,10 @@ export const Navbar = () => {
   </div>
   <div id="navbar-collapse-with-animation" className={`hs-collapse ${isMenuOpen ? '' : 'hidden'} overflow-hidden transition-all duration-300 basis-full grow md:flex`}>
   <div className="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform  md:hover:scale-105" href="#">Wallet</a>
-<a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform  md:hover:scale-105" href="#">Technologies</a>
-<a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform  md:hover:scale-105" href="#">Roadmap</a>
-<a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform  md:hover:scale-105" href="#">Trade</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Wallet</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Technologies</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Roadmap</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out" href="#">Trade</a>
 
 
 
