@@ -10,7 +10,7 @@ export const Navbar = () => {
   const searchInputRef: RefObject<HTMLInputElement> = useRef(null);
   const searchBarRef = useRef<HTMLDivElement | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -25,10 +25,25 @@ export const Navbar = () => {
     };
 }, []);
 
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      navRef.current?.classList.add('fixed-navbar');
+    } else {
+      navRef.current?.classList.remove('fixed-navbar');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+
   return (
       <>
       <motion.header
-     
+      ref={navRef}
       initial={{ y: -250 }}
       animate={{ y: -10 }}
       transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
@@ -41,6 +56,7 @@ export const Navbar = () => {
 
  
     <nav className="mt-6 relative max-w-7xl w-full bg-white border border-gray-300 rounded-lg shadow-xl mx-2 py-3 px-4 md:flex md:items-center md:justify-center md:py-0 md:px-6 lg:px-8 xl:mx-auto">
+ 
 
 
 
@@ -117,6 +133,7 @@ export const Navbar = () => {
       
     </div>
   </div>
+
 </nav>
 </header>
     </motion.header>

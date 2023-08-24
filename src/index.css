@@ -10,7 +10,6 @@ body {
 
 }
 
-/*loader*/
 .fade-in {
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -32,4 +31,15 @@ body {
   border-right: .15em solid orange; /* Cursor effect */
   width: 0;
   animation: typing 4s steps(40, end) forwards;
+}
+
+
+/** nav ******/
+
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;  /* Ajoutez cette ligne pour assurer que la barre commence à la gauche de la fenêtre */
+  width: 100%;
+  z-index: 1000;
 }

@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react';
 import { BounceLoader } from "react-spinners";
 import Typewriter from 'typewriter-effect';
 
+//TODO  Modif section masternode
 
 
 export const Header = () => {
@@ -16,6 +17,8 @@ export const Header = () => {
   const sectionRef4 = useRef<HTMLElement | null>(null);
   const [inView3, setInView3] = useState(false);
   const [inView4, setInView4] = useState(false);
+  const [hasBeenInView4, setHasBeenInView4] = useState(false);
+  const [hasBeenInView3, setHasBeenInView3] = useState(false);
   const [typingDone, setTypingDone] = useState(false);
   const [visibleIndex, setVisibleIndex] = useState(-1);
 
@@ -39,6 +42,20 @@ export const Header = () => {
     return () => clearTimeout(timer); // Effacer le timer si le composant est démonté
   }, []);
    // La dépendance assure que l'effet n'est exécuté que lorsque inView4 change
+
+   useEffect(() => {
+    if (inView4) {
+      setHasBeenInView4(true);
+    }
+  }, [inView4]);
+
+  useEffect(() => {
+    if (inView3) {
+      setHasBeenInView3(true);
+    }
+  }, [inView3]);
+  
+  
 
    useEffect(() => {
     const timer = setInterval(() => {
@@ -122,9 +139,9 @@ export const Header = () => {
         </video>
 
         <div className="flex-grow w-full px-4 md:w-[calc(50% - 2rem)] md:px-0">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">What is Diabase Blockchain</h1>
+            <h1 className="font-serif text-2xl md:text-3xl md:mt-2 lg:text-4xl mb-4 text-gray-900">What is Diabase Blockchain</h1>
           
-          <div className="prose max-w-none text-gray-700">
+          <div className="prose max-w-none md:mt-16 text-gray-700">
           <p className="font-medium text-sm sm:text-md md:text-lg lg:text-xl text-gray-700 overflow-auto">
     Introducing Diabase Blockchain a layer one blockchain, the next evolution in digital wealth preservation. Built upon the robust and secure X11 algorithm, Diabase offers unparalleled protection for your assets. With a unique focus on being a store of wealth, Diabase provides stability and long-term value appreciation.
     <br /><br />
@@ -161,8 +178,8 @@ export const Header = () => {
     initial="initial"
     animate="animate"
   >
-    <div className="lg:flex text-justify px-4"> 
-      <div className="flex-grow w-full px-4 md:w-[calc(50% - 2rem)] md:px-0">
+    <div className="lg:flex  text-justify px-4"> 
+      <div className="flex-grow w-full md:mt-16 px-4 md:w-[calc(50% - 2rem)] md:px-0">
         <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">Proof of Work (PoW) mining</h1>
         <div className="prose max-w-none text-gray-700 text-sm sm:text-md md:text-lg lg:text-xl"> 
           <div className="font-medium text-sm sm:text-md md:text-lg lg:text-lg text-gray-700 mr-4">
@@ -195,7 +212,7 @@ export const Header = () => {
 
     ref={sectionRef3}
     initial={{ opacity: 0 }}
-    animate={{ opacity: inView3 ? 1 : 0 }}
+    animate={{ opacity: inView3 || hasBeenInView3 ? 1 : 0 }}
     transition={{ duration: 1 }}
   >
     <img
@@ -206,7 +223,7 @@ export const Header = () => {
 
 
 <div className="lg:flex text-justify px-4"> 
-      <div className="flex-grow w-full px-4 md:w-[calc(50% - 2rem)] md:px-0">
+      <div className="flex-grow w-full md:mt-16 px-4 md:w-[calc(50% - 2rem)] md:px-0">
       <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">Diabase Masternodes</h1>
         <div className="prose max-w-none text-gray-700 text-sm sm:text-md md:text-lg lg:text-xl"> 
           <div className="font-medium text-sm sm:text-md md:text-lg lg:text-lg text-gray-700 mr-4">
@@ -248,16 +265,17 @@ export const Header = () => {
                 className="w-full h-auto lg:max-w-[30%] lg:max-h-[48vh] object-cover"
             />
 
-            <div className="flex-grow w-full px-4 md:w-[calc(50% - 2rem)] md:px-0">
-                <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">CoinJoin (PrivateSend)</h1>
-                <div className="prose max-w-none text-gray-700">
-                    <p className="font-medium text-sm sm:text-md md:text-lg lg:text-xl text-gray-700 overflow-auto">
-                        Diabase's CoinJoin feature, known as PrivateSend, is a privacy-enhancing mechanism that enables users to enhance the anonymity of their transactions. It works by combining multiple transactions from different users into a single transaction, making it difficult to trace the source and destination of funds. 
-                        <br /><br />
-                        See our Technologies section for more in depth breakdown of CoinJoin and how it works inside the Diabase Blockchain.
-                    </p>
-                </div>
-            </div>
+<div className="flex-grow w-full px-4 md:mt-16 md:ml-12 md:w-[calc(50% - 2rem)] md:px-0">
+    <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">CoinJoin (PrivateSend)</h1>
+    <div className="prose max-w-none text-gray-700">
+        <p className="font-medium text-sm sm:text-md md:text-lg lg:text-xl text-gray-700 overflow-auto">
+            Diabase's CoinJoin feature, known as PrivateSend, is a privacy-enhancing mechanism that enables users to enhance the anonymity of their transactions. It works by combining multiple transactions from different users into a single transaction, making it difficult to trace the source and destination of funds. 
+            <br /><br />
+            See our Technologies section for more in depth breakdown of CoinJoin and how it works inside the Diabase Blockchain.
+        </p>
+    </div>
+</div>
+
         </div>
     </motion.section>
 </section>
@@ -270,7 +288,7 @@ export const Header = () => {
 
     ref={sectionRef4}
     initial={{ opacity: 0 }}
-    animate={{ opacity: inView4 ? 1 : 0 }}
+    animate={{ opacity: inView4 || hasBeenInView4 ? 1 : 0 }}
     transition={{ duration: 1 }}
   >
     <img
