@@ -42,6 +42,8 @@ export const Navbar = () => {
  
     <nav className="mt-6 relative max-w-7xl w-full bg-white border border-gray-300 rounded-lg shadow-xl mx-2 py-3 px-4 md:flex md:items-center md:justify-center md:py-0 md:px-6 lg:px-8 xl:mx-auto">
 
+
+
     <img className="hidden md:block" src={Svg} alt="logo" />
   <div className="flex items-center justify-between">
      {/* Logo visible pour les écrans inférieurs à md */}

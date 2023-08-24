@@ -7,6 +7,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: url(assets/background.svg) no-repeat center center fixed;
   background-size: cover;
+
 }
 
 /*loader*/
@@ -17,4 +18,18 @@ body {
 
 .fade-in.visible {
   opacity: 1;
+}
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: .15em solid orange; /* Cursor effect */
+  width: 0;
+  animation: typing 4s steps(40, end) forwards;
 }
