@@ -6,33 +6,46 @@ import YourImagePathHere from '../assets/Search.png';
 import { useEffect, useRef, useState } from 'react';
 
 export const Header = () => {
+  const sectionRef3 = useRef<HTMLElement | null>(null);
+  const sectionRef4 = useRef<HTMLElement | null>(null);
 
-  const [inView, setInView] = useState(false);
-    const sectionRef = useRef(null);
+  const [inView3, setInView3] = useState(false);
+  const [inView4, setInView4] = useState(false);
 
-    useEffect(() => {
-      const currentSection = sectionRef.current;
-  
+  useEffect(() => {
+    const observeSection = (
+      sectionRef: React.RefObject<HTMLElement>,
+      setInViewFunction: (value: boolean) => void
+    ) => {
       const observer = new IntersectionObserver(
-          ([entry]) => {
-              setInView(entry.isIntersecting);
-          },
-          {
-              root: null,
-              rootMargin: '0px',
-              threshold: 0.1,
-          }
+        ([entry]) => {
+          setInViewFunction(entry.isIntersecting);
+        },
+        {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.1,
+        }
       );
-  
-      if (currentSection) {
-          observer.observe(currentSection);
+
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
       }
-  
+
       return () => {
-          if (currentSection) {
-              observer.unobserve(currentSection);
-          }
+        if (sectionRef.current) {
+          observer.unobserve(sectionRef.current);
+        }
       };
+    };
+
+    const unobserveSection3 = observeSection(sectionRef3, setInView3);
+    const unobserveSection4 = observeSection(sectionRef4, setInView4);
+
+    return () => {
+      unobserveSection3();
+      unobserveSection4();
+    };
   }, []);
   
   // Variants for fade in animation
@@ -40,6 +53,7 @@ export const Header = () => {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { duration: 1, ease: [0.6, -0.05, 0.01, 0.99] } }
   };
+
   
   return (
     <>
@@ -117,10 +131,11 @@ export const Header = () => {
 {/**Section 3 */}
 <section>
 <motion.section
- className="mt-10 sm:mt-12 lg:mt-14 p-3 mx-20 border-2 bg-opacity-50 bg-white backdrop-blur-md shadow-lg border-gray-300 rounded-lg lg:max-h-[50vh] overflow-hidden"
-            ref={sectionRef}
+    className="mt-10 sm:mt-12 lg:mt-14 p-3 mx-20 border-2 bg-opacity-50 bg-white backdrop-blur-md shadow-lg border-gray-300 rounded-lg lg:max-h-[50vh] overflow-hidden"
+  
+            ref={sectionRef3}
             initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
+            animate={{ opacity: inView3 ? 1 : 0 }}
             transition={{ duration: 1 }}
         >
         <div className="lg:flex">
@@ -149,10 +164,11 @@ export const Header = () => {
 <section>
 
 <motion.section
-className="mt-10 sm:mt-12 lg:mt-14 p-3 mx-20 border-2 bg-opacity-50 bg-white backdrop-blur-md shadow-lg border-gray-300 rounded-lg lg:max-h-[50vh] overflow-hidden"
-            ref={sectionRef}
+    className="mt-10 sm:mt-12 lg:mt-14 p-3 mx-20 border-2 bg-opacity-50 bg-white backdrop-blur-md shadow-lg border-gray-300 rounded-lg lg:max-h-[50vh] overflow-hidden"
+  
+            ref={sectionRef4}
             initial={{ opacity: 0 }}
-            animate={{ opacity: inView ? 1 : 0 }}
+            animate={{ opacity: inView4 ? 1 : 0 }}
             transition={{ duration: 1 }}
            
         >
