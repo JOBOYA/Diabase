@@ -3,6 +3,7 @@ import Xeg from '../assets/Xeggex.svg';
 
 
 export const Trade = () => {
+   
     return (
         <div className="trade flex flex-col items-center">
             <h2 className="text-3xl md:text-6xl text-center font-bold mt-10 md:mt-20 md:m-20">Trade</h2>
