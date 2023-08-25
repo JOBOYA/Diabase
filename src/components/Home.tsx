@@ -332,7 +332,7 @@ export const Header = () => {
     <div className="flex-grow w-full px-4 lg:mr-12 md:w-[calc(60% - 2rem)] md:px-0 overflow-auto"> 
       <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">Purpose of Diabase Blockchain with Low Max Supply</h1>
       <div className="prose max-w-none text-gray-700">
-      <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">Diabase Blockchain Purpose</h2>
+      <h2 className="font-serif text-2xl md:text-3xl lg:text-2xl mb-4 text-gray-900">A Private Store of Wealth</h2>
 <br/>The Diabase blockchain, characterized by its low maximum supply, strategic early emission schedule, and privacy features, has a multifaceted purpose as a sophisticated store of wealth. Designed to provide individuals and institutions with a secure, private, and inflation-resistant avenue for wealth preservation and growth, Diabase leverages its unique attributes to create a novel solution in the digital financial landscape.
 
 <br/>Scarcity and Value Preservation: At the heart of Diabase's purpose is its low maximum supply, a feature inspired by the scarcity principle of precious resources like gold. This scarcity inherently creates value, as the finite supply means that each unit of the native Diabase coin becomes increasingly valuable with growing demand. This quality positions Diabase as a potential store of wealth, where the value of holdings can appreciate over time, mitigating the erosive effects of inflation.
