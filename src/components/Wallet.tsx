@@ -1,8 +1,11 @@
-import {Tilt} from 'react-tilt';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import { Tilt } from 'react-tilt';
 import Wind from '../assets/IconWallet/Window.svg';
 import MacOs from '../assets/IconWallet/Mac.svg';
 import Linux from '../assets/IconWallet/Linux.svg';
 import Cli from '../assets/IconWallet/Cli.svg';
+import Komodo from '../assets/IconWallet/Komodowallet.svg';
 
 export const Wallet = () => {
     const operatingSystems = [
@@ -12,11 +15,28 @@ export const Wallet = () => {
         { name: "CLI", icon: Cli },
     ];
 
+    const [inViewRef, inView] = useInView({
+        threshold: 0.1, 
+        triggerOnce: true, 
+    });
+
+    const variants = {
+        hidden: { opacity: 0 },
+        visible: (index: number) => ({ opacity: 1, transition: { delay: index * 0.5, duration: 0.5 } }),
+    };
+
     return (
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center" ref={inViewRef}>
+          
             {operatingSystems.map((os, index) => (
                 <Tilt key={index} className="Tilt" options={{ max: 25 }}>
-                    <div className="Tilt-inner m-4">
+                    <motion.div
+                        className="Tilt-inner m-4"
+                        initial="hidden"
+                        animate={inView ? 'visible' : 'hidden'} 
+                        variants={variants}
+                        custom={index}
+                    >
                         <div
                             className="
                                 w-64 h-64 m-5 md:w-72 lg:w-80
@@ -30,7 +50,7 @@ export const Wallet = () => {
                             "
                         >
                             <div className="image-container">
-                            <img src={os.icon} alt={os.name} className="w-16 h-16 mb-2 custom-image" />
+                                <img src={os.icon} alt={os.name} className="w-16 h-16 mb-2 custom-image" />
                             </div>
                             <button  className="custom-button btn">
                                 {os.name}
@@ -44,9 +64,12 @@ export const Wallet = () => {
                                 <span id="leftArrow" className="arrow"></span>
                             </button>
                         </div>
-                    </div>
+                    </motion.div>
                 </Tilt>
             ))}
+           <img src={Komodo} alt="Komodo"  />
+
+
         </div>
     );
-};
+}
