@@ -3,6 +3,7 @@ import { Header} from './components/Home'
 import {Footer}  from './components/Footer'
 import {Wallet} from './components/Wallet'
 import { Techno } from './components/Techno'
+import { Trade } from './components/Trade'
 import './index.css'
 
 
@@ -16,6 +17,7 @@ export default function App() {
   <Wallet />
 </div>
     <Techno />
+    <Trade />
 
    
     <Footer />
