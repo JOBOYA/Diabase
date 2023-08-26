@@ -5,7 +5,7 @@ import Wind from '../assets/IconWallet/Window.svg';
 import MacOs from '../assets/IconWallet/Mac.svg';
 import Linux from '../assets/IconWallet/Linux.svg';
 import Cli from '../assets/IconWallet/Cli.svg';
-import Komodo from '../assets/IconWallet/Komodowallet.svg';
+import Komodo from '../assets/IconWallet/komodowallet.svg';
 
 export const Wallet = () => {
     const operatingSystems = [
