@@ -255,3 +255,16 @@ button:hover #clip {
     opacity: 0;
   }
 }
+
+
+/* Dans MasternodeGuide.css */
+.myTabList {
+  background-color: lightgrey;
+  color: black;
+  /* autres styles ici */
+}
+
+.myTab {
+  padding: 10px;
+  /* autres styles ici */
+}

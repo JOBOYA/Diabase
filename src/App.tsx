@@ -6,26 +6,37 @@ import { Techno } from './components/Techno'
 import { Trade } from './components/Trade'
 import { Mouse } from './components/Mouse'
 import RoadMap from "./components/RoadMap";
+import {MasternodeGuide} from "./components/DocumentationMasternode";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css'
 
 
 export default function App() {
   return (
-   <>
-   <Mouse />
-    <Navbar />
-    <Header />
-    <div className='md:m-40'>
-  <h1 className='text-6xl text-center font-bold'>Wallet</h1>
-  <Wallet />
-</div>
-    <Techno />
-    <Trade />
-    <RoadMap />
+    <Router>
+      <Routes>
+        <Route path="/*" element={<Layout />} /> 
+        <Route path="/masternode-setup" element={<MasternodeGuide/>} />
+      </Routes>
+    </Router>
+  );
+}
 
-   
-    <Footer />
-    
-   </>
+function Layout() {
+  return (
+    <>
+    <Mouse />
+      <Navbar />
+
+      <Header />
+      
+      <Techno />
+      <Trade />
+      <RoadMap />
+      <Wallet />
+
+      
+      <Footer />
+    </>
   )
 }
