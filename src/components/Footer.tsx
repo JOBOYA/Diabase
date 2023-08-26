@@ -3,7 +3,7 @@ import Discord from '../assets/social/Discord.svg';
 import Facebook from '../assets/social/Facebook.svg';
 import TwitterX from '../assets/social/TwitterX.svg';
 import Youtube from '../assets/social/Youtube.svg';
-
+import LinkedIn from '../assets/social/Linkedin.svg';
 import Telegram from '../assets/social/Telegram.svg';
 import { copyRight } from './Copyright';
 
