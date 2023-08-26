@@ -4,7 +4,7 @@ import videoSource2 from '../assets/Happy.mp4';
 import Private from '../assets/PrivatSend.png';
 import MaxSuply from '../assets/MaxSupply.png';
 import YourImagePathHere from '../assets/Search.png';
-import Master from '../assets/MasterNode.png';
+import Master from '../assets/Masternode.png';
 import { useEffect, useRef, useState } from 'react';
 import { BounceLoader } from "react-spinners";
 import Typewriter from 'typewriter-effect';
