@@ -24,7 +24,7 @@ export const Footer = () => {
           <img src={Youtube} className="h-16 sm:h-20 w-16 sm:w-20" alt="Youtube" />
         </a>
         <a href="#" className="transform hover:scale-110 transition-transform">
-          <img src={LinkedIn} className="h-16 sm:h-20 w-16 sm:w-20" alt="LinkedIn" />
+          <img src={LinkedIn} className="h-16 sm:h-20 w-16 sm:w-20" alt="Linkedin" />
         </a>
         <a href="#" className="transform hover:scale-110 transition-transform">
           <img src={Telegram} className="h-16 sm:h-20 w-16 sm:w-20" alt="Telegram" />
