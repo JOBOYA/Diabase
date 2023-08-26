@@ -85,10 +85,10 @@ useEffect(() => {
   <div className="md:ml-auto flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
 
 
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#">Wallet</a>
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#">Technologies</a>
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#">Roadmap</a>
-  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#">Trade</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#wallet">Wallet</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#techno">Technologies</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#roadmap">Roadmap</a>
+  <a className="font-medium text-gray-500 hover:text-teal-600 py-6 dark:text-gray-400 uppercase text-lg transition duration-300 ease-in-out transform hover:scale-110 md:hover:scale-125" href="#trade">Trade</a>
 
 
 

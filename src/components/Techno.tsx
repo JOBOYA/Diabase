@@ -65,7 +65,7 @@ export const Techno = () => {
         <>
 
 
-        <section>
+        <section id='techno'>
   <motion.section
     className="mt-10 sm:mt-12 lg:mt-14 p-3 mx-4 sm:mx-20 border-2 bg-opacity-50 bg-white backdrop-blur-md shadow-lg border-gray-300 rounded-lg lg:max-h-[50vh] overflow-hidden lg:flex lg:flex-row-reverse" 
     

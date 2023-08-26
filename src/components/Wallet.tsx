@@ -26,7 +26,7 @@ export const Wallet = () => {
     };
 
     return (
-        <div className="flex flex-wrap justify-center" ref={inViewRef}>
+        <div id="wallet" className="flex flex-wrap justify-center" ref={inViewRef}>
           
             {operatingSystems.map((os, index) => (
                 <Tilt key={index} className="Tilt" options={{ max: 25 }}>

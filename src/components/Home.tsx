@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from 'react';
 import { BounceLoader } from "react-spinners";
 import Typewriter from 'typewriter-effect';
 
+
 //TODO  Modif section masternode
 
 
@@ -352,7 +353,7 @@ export const Header = () => {
 <br/>In conclusion, the Diabase blockchain's purpose as a private store of wealth is defined by its low max supply, early emission schedule, and emphasis on privacy and security. By merging scarcity, security, and financial innovation, Diabase seeks to create a platform that empowers users to preserve and grow their wealth in a private, secure, and sustainable manner.
       </div>
     </div>  
-
+ 
   </motion.section>
 </section>
 

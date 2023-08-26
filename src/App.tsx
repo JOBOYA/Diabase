@@ -5,6 +5,7 @@ import {Wallet} from './components/Wallet'
 import { Techno } from './components/Techno'
 import { Trade } from './components/Trade'
 import { Mouse } from './components/Mouse'
+import RoadMap from "./components/RoadMap";
 import './index.css'
 
 
@@ -20,7 +21,7 @@ export default function App() {
 </div>
     <Techno />
     <Trade />
-    
+    <RoadMap />
 
    
     <Footer />
