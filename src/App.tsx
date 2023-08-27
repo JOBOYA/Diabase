@@ -6,9 +6,9 @@ import { Techno } from './components/Techno'
 import { Trade } from './components/Trade'
 import { Mouse } from './components/Mouse'
 import RoadMap from "./components/RoadMap";
-import {MasternodeGuide} from "./components/DocumentationMasternode";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css'
+import {DocumentationMasternode} from './components/DocumentationMasternode'
 
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/*" element={<Layout />} /> 
-        <Route path="/masternode-setup" element={<MasternodeGuide/>} />
+        <Route path="/masternode-setup" element={<DocumentationMasternode/>} />
       </Routes>
     </Router>
   );
@@ -32,8 +32,9 @@ function Layout() {
       
       <Techno />
       <Trade />
-      <RoadMap />
       <Wallet />
+      <RoadMap />
+      
 
       
       <Footer />

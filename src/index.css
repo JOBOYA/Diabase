@@ -10,6 +10,9 @@ body {
 
 }
 
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -48,6 +51,8 @@ html {
   width: 100%;
   z-index: 1000;
 }
+
+
 
 
 
