@@ -17,7 +17,7 @@ body {
   max-width: 600px; 
 }
 
-{/**scrollbar **/}
+
 
 html {
   scroll-behavior: smooth;
@@ -299,4 +299,10 @@ button:hover #clip {
 
 .text-red-500 {
   color: #ef4444;
+}
+
+
+.arrow-up {
+  position: fixed;  /* ou 'relative', 'absolute', 'sticky' */
+  z-index: 1000;
 }

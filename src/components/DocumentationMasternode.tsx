@@ -1,4 +1,7 @@
 import React, { ReactNode, useState } from 'react';
+import ArrowUp from './ArrowUp'
+import { FaHome } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 
 interface Section {
@@ -320,34 +323,48 @@ export const DocumentationMasternode: React.FC = () => {
     window.scrollTo(0, 0);
   };
 
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    navigate('/');
+  };
+
   return (
-   
-    <div className="min-h-screen flex flex-col   md:relative sm:relative  md:flex-row bg-opacity-40 bg-black backdrop-blur text-white
-    ">
-  <div className="md:w-1/4  bg-slate-800 p-4  "> {/* Largeur ajustée ici */}
-    <ul>
-      {sections.map((section, index) => (
-        <li 
-          key={index}
-          className={`cursor-pointer p-2 hover:bg-gray-700 transition ease-in-out duration-150 ${selectedSection.title === section.title ? 'bg-gray-700' : ''}`}
-          onClick={() => handleSectionClick(section)}
+    <>
+    <ArrowUp />
+    <div className="min-h-screen flex flex-col md:relative sm:relative md:flex-row bg-opacity-40 bg-black backdrop-blur text-white">
+      <div className="md:w-1/5 w-full bg-slate-800 p-4 "> {/* Largeur réduite ici */}
+        <ul>
+          {sections.map((section, index) => (
+            <li 
+              key={index}
+              className={`cursor-pointer my-2 p-2 hover:bg-gray-500 rounded-lg transition ease-in-out duration-300 ${selectedSection.title === section.title ? 'bg-gray-700' : ''}`}
+
+              onClick={() => handleSectionClick(section)}
+            >
+              <span className="inline-block ml-2 mr-4 hover:px-4">{section.title}</span>
+            </li>
+          ))}
+           <li 
+    style={{marginTop: '20px'}}
+    className="cursor-pointer my-2 p-2 rounded-lg"
+    onClick={() => handleHomeClick()}
+>
+    <FaHome className="inline-block mr-2 " />
+    <span className="inline-block">Home</span>
+</li>
+
+        </ul>
+      </div>
+      <div className="flex-1 p-4 md:p-8 bg-slate-700 backdrop-blur-md">
+        <h2 className="text-lg md:text-xl font-semibold mb-4 text-green-400">{selectedSection.title}</h2>
+        <div 
+          className="w-full p-4 bg-gray-800 text-white border border-gray-700 rounded-2xl text-sm md:text-lg leading-relaxed"
         >
-          <span className="inline-block hover:px-4">{section.title}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-  <div className="flex-1 p-4 md:p-8 bg-slate-700 backdrop-blur-md ">
-    <h2 className="text-lg md:text-xl font-semibold mb-4 text-green-400">{selectedSection.title}</h2>
-    <div 
-      className="w-full p-4 bg-gray-800 text-white border border-gray-700 rounded-2xl text-sm md:text-lg leading-relaxed "
-    >
-      {selectedSection.content}
+          {selectedSection.content}
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
-
-  
+    </>
   );
-};
+}  

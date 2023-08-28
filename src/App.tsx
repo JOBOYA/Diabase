@@ -6,6 +6,7 @@ import { Techno } from './components/Techno'
 import { Trade } from './components/Trade'
 import { Mouse } from './components/Mouse'
 import RoadMap from "./components/RoadMap";
+import ArrowUp from './components/ArrowUp'
 import './index.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {DocumentationMasternode} from './components/DocumentationMasternode'
@@ -25,6 +26,7 @@ export default function App() {
 function Layout() {
   return (
     <>
+    <ArrowUp />
     <Mouse />
       <Navbar />
 
