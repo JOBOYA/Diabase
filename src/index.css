@@ -273,3 +273,32 @@ button:hover #clip {
   padding: 10px;
   /* autres styles ici */
 }
+
+
+/**********/
+
+.content {
+  font-family: Arial, sans-serif;
+}
+
+.command {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nano-terminal {
+  background: #333;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
