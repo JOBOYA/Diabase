@@ -1,5 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 
+
 interface Section {
   title: string;
   content: ReactNode;
@@ -310,28 +311,32 @@ export const DocumentationMasternode: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen bg-opacity-40 bg-black backdrop-blur text-white">
-      <div className="w-1/4 bg-slate-800 p-4"> {/* Largeur ajustée ici */}
-        <ul>
-          {sections.map((section, index) => (
-            <li 
-              key={index}
-              className={`cursor-pointer p-2 hover:bg-gray-700 transition ease-in-out duration-150 ${selectedSection.title === section.title ? 'bg-gray-700' : ''}`}
-              onClick={() => handleSectionClick(section)}
-            >
-              <span className="inline-block hover:px-4">{section.title}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="flex-1 p-8 bg-slate-700 backdrop-blur-md ">
-        <h2 className="text-xl font-semibold mb-4 text-green-400">{selectedSection.title}</h2> {/* Taille du texte ajustée ici */}
-        <div 
-          className="w-full p-4 bg-gray-800 text-white border border-gray-700 rounded-2xl text-lg leading-relaxed"
+   
+    <div className="flex flex-col md:flex-row h-screen bg-opacity-40 bg-black backdrop-blur text-white">
+  <div className="md:w-1/4 w-full bg-slate-800 p-4 "> {/* Largeur ajustée ici */}
+    <ul>
+      {sections.map((section, index) => (
+        <li 
+          key={index}
+          className={`cursor-pointer p-2 hover:bg-gray-700 transition ease-in-out duration-150 ${selectedSection.title === section.title ? 'bg-gray-700' : ''}`}
+          onClick={() => handleSectionClick(section)}
         >
-          {selectedSection.content}
-        </div>
-      </div>
+          <span className="inline-block hover:px-4">{section.title}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <div className="flex-1 p-4 md:p-8 bg-slate-700 backdrop-blur-md ">
+    <h2 className="text-lg md:text-xl font-semibold mb-4 text-green-400">{selectedSection.title}</h2>
+    <div 
+      className="w-full p-4 bg-gray-800 text-white border border-gray-700 rounded-2xl text-sm md:text-lg leading-relaxed"
+    >
+      {selectedSection.content}
     </div>
+  </div>
+</div>
+
+
+  
   );
 };
