@@ -289,7 +289,7 @@ export const Header = () => {
 
     ref={sectionRef4}
     initial={{ opacity: 0 }}
-    animate={{ opacity: inView4 || hasBeenInView4 ? 1 : 0 }}
+    animate={{ opacity: inView4 ? hasBeenInView4 ? 1 : 0 : 0 }}
     transition={{ duration: 1 }}
   >
     <img

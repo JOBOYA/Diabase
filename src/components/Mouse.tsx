@@ -66,10 +66,11 @@ export const Mouse = () => {
               borderRadius: '50%',
               transform: 'translate(-50%, -50%)',
               backdropFilter: 'blur(10px)',
-              animation: 'fade-out 1s forwards'  // Add this line
+              pointerEvents: 'none',  // Ajout de cette ligne
+              animation: 'fade-out 1s forwards'  
             }} />
           ))}
           </>
       )
-    }
+}    
     
