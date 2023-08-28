@@ -85,7 +85,7 @@ const sections: Section[] = [
         
           <br/>#----
           <br/>rpcuser=XXXXXXXXXXXXX
-          <br/>rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          <br/>rpcpassword=XXXXXXXXXXXXXXXXXXXXXXXXX
           <br/> rpcallowip=127.0.0.1
           <br/> #----
           <br/>listen=1
@@ -110,10 +110,10 @@ const sections: Section[] = [
 <p>You will see a message indicating that the Diabase server is starting.</p>
 <br/>
 <p>Now, you need to wait for 15 confirmations of the collateral transaction to complete and for the blockchain to finish synchronizing on the masternode. You can use the following commands to monitor progress:</p>
-<pre className="bg-gray-100 p-2 rounded-md"><span className="text-blue-500">~/.diabasecore/diabase-cli mnsync status</span></pre>
+<pre className="bg-gray-100 p-2 rounded-md " style={{whiteSpace: "pre-line", overflowWrap: "break-word"}}><span className="text-blue-500">~/.diabasecore/diabase-cli mnsync status</span></pre>
 <br/>
 <p>When the synchronization is complete, you should see the following response:</p>
-<div className="bg-gray-900 text-white p-4 rounded-md font-mono">
+<div className="bg-gray-900 p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 rounded text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" style={{whiteSpace: "pre-line", overflowWrap: "break-word"}}>
   <pre>
     {"{"}<br />
       "AssetID": 999,<br />
@@ -148,11 +148,17 @@ const sections: Section[] = [
 <br/>
 <p className="mb-4">This should return a string of characters similar to the following:</p>
 
-<div className="bg-gray-900 p-2 rounded">
-  {`{
-    "16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3-1",
-   }`}
+<div className="bg-gray-900 p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 rounded text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" style={{whiteSpace: "pre-line", overflowWrap: "break-word"}}>
+  <span>{`{
+     "16347a28f4e5edf39f4dceac60e2327931a25fdee1fb4b94b63eeacf0d5879e3-1",
+     }`
+  }
+  </span>
 </div>
+
+
+
+
 
 <p className="mb-4">The first long string is your collateralHash, while the last number is the collateralIndex.</p>
 
@@ -260,12 +266,15 @@ const sections: Section[] = [
 <h2 className="text-2xl font-bold mb-4">Should Return Similar To Below</h2>
 <p className="mb-4">Running the command should return an output similar to the following:</p>
 
-<div className="bg-gray-900 p-4 rounded md:text-sm">
+
+
+<div className="bg-gray-900 p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 rounded text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl" style={{whiteSpace: "pre-line", overflowWrap: "break-word"}}>
   <span>
     {`{
       "tx": "030001000175c9d23...",
       "collateralAddress": "yjSPYvgUiAQ9AFj5tKFA8thFLoLBUxQERb",
-      "signMessage": "yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN|0|yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip|yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg|ad5f82257bd00a5a1cb5da1a44a6eb8899cf096d3748d68b8ea6d6b10046a28e"
+      "signMessage": "yjZVt49WsQd6XSrPVAUGXtJccxviH9ZQpN|0|yfgxFhqrdDG15ZWKJAN6dQvn6dZdgBPAip|yfRaZN8c3Erpqj9iKnmQ9QDBeUuRhWV3Mg|
+      ad5f82257bd00a5a1cb5da1a44a6eb8899cf096d3748d68b8ea6d6b10046a28e"
     }`}
   </span>
 </div>
@@ -283,7 +292,7 @@ const sections: Section[] = [
   <div className="bg-gray-900 p-4 rounded"><span>protx register_submit tx sig</span></div>
 
   
-  <h2 className="text-2xl font-bold mb-4">Congratulations! Your masternode is now running.</h2>
+  <br/><h2 className="text-2xl font-bold mb-4">🥳 Congratulations! Your masternode is now running.🚀🚀</h2>
   <p className="mb-4">Your masternode is now registered and will appear on the Deterministic Masternode List after the transaction is mined to a block. You can view this list on the Masternodes tab of the Diabase Core wallet.</p>
   
   <p>At this point, you can go back to your terminal window and monitor your masternode by entering <span>~/.diabasecore/diabase-cli masternode status</span> or using the Get status function in DMT.</p>
@@ -308,12 +317,14 @@ export const DocumentationMasternode: React.FC = () => {
 
   const handleSectionClick = (section: Section) => {
     setSelectedSection(section);
+    window.scrollTo(0, 0);
   };
 
   return (
    
-    <div className="flex flex-col md:flex-row h-screen bg-opacity-40 bg-black backdrop-blur text-white">
-  <div className="md:w-1/4 w-full bg-slate-800 p-4 "> {/* Largeur ajustée ici */}
+    <div className="min-h-screen flex flex-col   md:relative sm:relative  md:flex-row bg-opacity-40 bg-black backdrop-blur text-white
+    ">
+  <div className="md:w-1/4  bg-slate-800 p-4  "> {/* Largeur ajustée ici */}
     <ul>
       {sections.map((section, index) => (
         <li 
@@ -329,7 +340,7 @@ export const DocumentationMasternode: React.FC = () => {
   <div className="flex-1 p-4 md:p-8 bg-slate-700 backdrop-blur-md ">
     <h2 className="text-lg md:text-xl font-semibold mb-4 text-green-400">{selectedSection.title}</h2>
     <div 
-      className="w-full p-4 bg-gray-800 text-white border border-gray-700 rounded-2xl text-sm md:text-lg leading-relaxed"
+      className="w-full p-4 bg-gray-800 text-white border border-gray-700 rounded-2xl text-sm md:text-lg leading-relaxed "
     >
       {selectedSection.content}
     </div>

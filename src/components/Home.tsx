@@ -8,7 +8,7 @@ import Master from '../assets/Masternode.png';
 import { useEffect, useRef, useState } from 'react';
 import { BounceLoader } from "react-spinners";
 import Typewriter from 'typewriter-effect';
-
+import '../index.css'
 
 //TODO  Modif section masternode
 

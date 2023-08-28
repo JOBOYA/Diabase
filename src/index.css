@@ -5,19 +5,23 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: url(assets/background.svg) no-repeat center center fixed ;
+  background: url(assets/background.svg) no-repeat center center fixed;
   background-size: cover;
+  min-height: 100vh
+
 
 }
 
-* {
-  box-sizing: border-box;
+
+.content {
+  max-width: 600px; 
 }
 
-
+{/**scrollbar **/}
 
 html {
   scroll-behavior: smooth;
+
 }
 
 
@@ -266,8 +270,8 @@ button:hover #clip {
 
 
 
+/****SETUP******/
 
-/**********/
 
 .content {
   font-family: Arial, sans-serif;

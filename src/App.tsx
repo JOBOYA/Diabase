@@ -6,8 +6,8 @@ import { Techno } from './components/Techno'
 import { Trade } from './components/Trade'
 import { Mouse } from './components/Mouse'
 import RoadMap from "./components/RoadMap";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import {DocumentationMasternode} from './components/DocumentationMasternode'
 
 
