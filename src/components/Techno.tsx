@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Master from '../assets/Masternode-techno.svg';
-import videoSource from '../assets/Private.mp4';
-import Transaction from '../assets/Transaction.svg';
-import server from '../assets/server.svg';
+import Master from '../assets/Diabase-master.svg';
+import videoSource from '../assets/Diabase-private.mp4';
+import Transaction from '../assets/Design-send.svg';
+import server from '../assets/Diabase-server.svg';
 //import {Cpu} from '../assets/Cpu.svg';
 //import Touch  from '../assets/Touch.svg';
 import { motion } from 'framer-motion';
@@ -66,6 +66,7 @@ export const Techno = () => {
 
 
         <section id='techno'>
+        <h2 className="text-3xl md:text-6xl text-center font-bold mt-10 md:mt-20 md:m-20 text-slate-800">TECH</h2>
   <motion.section
     className="mt-10 sm:mt-12 lg:mt-14 p-3 mx-4 sm:mx-20 border-2 bg-opacity-50 bg-white backdrop-blur-md shadow-lg border-gray-300 rounded-lg lg:max-h-[50vh] overflow-hidden lg:flex lg:flex-row-reverse" 
     
@@ -82,6 +83,7 @@ export const Techno = () => {
 
 
     <div className="flex-grow w-full px-4 lg:mr-12 md:w-[calc(60% - 2rem)] md:px-0 overflow-auto"> 
+   
       <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl mb-4 text-gray-900">Masternodes</h1>
       <div className="prose max-w-none text-gray-700">
      

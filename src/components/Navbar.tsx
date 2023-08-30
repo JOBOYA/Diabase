@@ -1,4 +1,4 @@
-import Svg from '../assets/Diabase.svg'
+import Svg from '../assets/Design_nav.svg'
 import { motion } from "framer-motion";
 import { useState, useRef,  useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -41,11 +41,15 @@ useEffect(() => {
     <nav className="mt-6 relative max-w-7xl w-full bg-white border border-gray-300 rounded-lg shadow-xl mx-2 py-3 px-4 md:flex md:items-center md:justify-center md:py-0 md:px-6 lg:px-8 xl:mx-auto">
 
 <a  href="#" aria-label="Brand">
-    <img className="hidden md:block" src={Svg} alt="logo" />
+<img className="hidden w-48 md:block mr-2 " src={Svg} alt="logo" />
+
+
+
     </a>
   <div className="flex items-center justify-between">
      {/* Logo visible pour les écrans inférieurs à md */}
-    <img className="block md:hidden mr-2" src={Svg} alt="logo" />
+    
+
     <a className="flex-none text-xl font-semibold dark:text-white" href="#" aria-label="Brand">
     
 

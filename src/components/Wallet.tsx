@@ -26,6 +26,8 @@ export const Wallet = () => {
     };
 
     return (
+        <>
+        <h2 className="text-3xl md:text-6xl text-center font-bold mt-10 md:mt-20 md:m-20 text-slate-800">Wallet</h2>
         <div id="wallet" className="flex flex-wrap justify-center" ref={inViewRef}>
           
             {operatingSystems.map((os, index) => (
@@ -71,5 +73,6 @@ export const Wallet = () => {
 
 
         </div>
+        </>
     );
 }

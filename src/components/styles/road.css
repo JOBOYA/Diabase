@@ -79,7 +79,7 @@ h3 {
   max-width: 400px;
   padding: 15px;
   opacity: 0.8;
-  background: rgb(128, 82, 255);
+  background: rgb(0, 128, 128);
 }
 
 .timeline ul li div {
@@ -113,7 +113,7 @@ h3 {
 .timeline ul li:nth-child(odd) div::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
-  border-color: transparent rgb(128, 82, 255) transparent transparent;
+  border-color: transparent rgba(82, 157, 255, 0.993) transparent transparent;
 }
 
 /*Distance for left content main box*/
@@ -124,10 +124,11 @@ h3 {
 
 /*Box for left triangle box*/
 .timeline ul li:nth-child(even) div::before {
-  right: -15px;
+  right: -410px;
   border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent rgb(128, 82, 255);
+  border-color: transparent  transparent transparent rgba(82, 157, 255, 0.993);
 }
+
 
 /*Css for phase text inside the box*/
 phase {
@@ -141,7 +142,7 @@ phase {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .timeline ul li::after {
-  transition: background 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .timeline ul li.in-view::after {
@@ -195,10 +196,11 @@ phase {
     left: 45px;
   }
   .timeline ul li:nth-child(even) div::before {
-    left: -15px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent rgb(128, 82, 255) transparent transparent;
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent rgb(128, 82, 255);
   }
+  
 }
 
 @media screen and (max-width: 360px) {

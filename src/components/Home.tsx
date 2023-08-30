@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import videoSource from '../assets/Diabase-video.mp4';
+import videoSource from '../assets/DIABASE-WHATS.mp4';
 import videoSource2 from '../assets/Happy.mp4';
 import Private from '../assets/PrivatSend.png';
-import MaxSuply from '../assets/MaxSupply.png';
-import YourImagePathHere from '../assets/Search.png';
-import Master from '../assets/Master.svg';
+import MaxSuply from '../assets/Purpose.svg';
+import Search from '../assets/Diabase-search.svg';
+import Master from '../assets/DIABASE-node.svg';
 import { useEffect, useRef, useState } from 'react';
 import { BounceLoader } from "react-spinners";
 import Typewriter from 'typewriter-effect';
@@ -293,7 +293,7 @@ export const Header = () => {
     transition={{ duration: 1 }}
   >
     <img
-      src={YourImagePathHere}
+      src={Search}
       alt="Blockchain"
       className="w-full h-auto lg:max-w-[30%] lg:max-h-[48vh] object-cover lg:ml-12"
     />
@@ -327,7 +327,8 @@ export const Header = () => {
     <img
       src={MaxSuply}
       alt="Blockchain"
-      className="w-full h-auto lg:max-w-[30%] lg:max-h-[48vh] object-cover lg:mr-12" 
+      className="mt-4 w-full h-auto lg:max-w-[26%] lg:max-h-[48vh] object-cover"
+
     />
 
     <div className="flex-grow w-full px-4 lg:mr-12 md:w-[calc(60% - 2rem)] md:px-0 overflow-auto"> 
