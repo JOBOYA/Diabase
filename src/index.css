@@ -62,7 +62,6 @@ html {
 
 
 
-
 /*****button card *********/
 
 .btn {
@@ -306,3 +305,7 @@ button:hover #clip {
   position: fixed;  /* ou 'relative', 'absolute', 'sticky' */
   z-index: 1000;
 }
+
+
+
+

@@ -1,9 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    {
+      name: 'pdf-assets',
+      load(id) {
+        if (id.endsWith('.pdf')) {
+          return `export default new URL('${id}', import.meta.url).href`;
+        }
+      }
+    }
+  ],
   server: {
     port: 3000,
   },

@@ -2,6 +2,8 @@ import Svg from '../assets/Diabase.svg'
 import { motion } from "framer-motion";
 import { useState, useRef,  useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import pdfPath from '../pdf_whitepaper/Diabase_Blockchain_Technical_Whitepaper.pdf';
+
 
 
 export const Navbar = () => {
@@ -90,12 +92,14 @@ useEffect(() => {
       </Link>
         
       <a 
-  className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-teal-200 dark:hover:text-black" 
-  href="/pdf_whitepaper/Diabase Blockchain Technical Whitepaper.pdf"
+  className="flex items-center gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-teal-200 dark:hover:text-black"
+  href={new URL(pdfPath, import.meta.url).href} 
   download
 >
   WHITEPAPER
 </a>
+
+
 
   </div>
       </div>
@@ -107,3 +111,5 @@ useEffect(() => {
       </>
   )
 }
+
+
